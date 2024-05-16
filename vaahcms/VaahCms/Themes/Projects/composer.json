@@ -1,0 +1,28 @@
+{
+    "name": "vaahcms/projects",
+    "description": "Theme For Projects",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "vaah",
+            "email": "support@vaah.dev"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "VaahCms\\Themes\\Projects\\Providers\\ProjectsServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "VaahCms\\Themes\\Projects\\": ""
+        }
+    }
+}

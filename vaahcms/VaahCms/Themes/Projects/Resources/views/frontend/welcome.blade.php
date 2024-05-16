@@ -1,0 +1,103 @@
+@extends("projects::frontend.layouts.default")
+
+@section('vaahcms_extend_frontend_head')
+
+@endsection
+
+@section('vaahcms_extend_frontend_css')
+
+@endsection
+
+@section('vaahcms_extend_frontend_scripts')
+
+@endsection
+
+@section('content')
+<div class="container  mt-6">
+
+{{--        <div class="notification is-link is-light">--}}
+{{--            This page should contain welcome message which does not require any database to run.--}}
+{{--            You can write theme setup information.--}}
+{{--        </div>--}}
+
+{{--        <section class="hero">--}}
+{{--            <div class="hero-body">--}}
+{{--                <p class="title">Projects</p>--}}
+
+{{--                <p class="subtitle">Welcome Page.</p>--}}
+
+{{--            </div>--}}
+{{--        </section>--}}
+    <div >
+        <div class="section">
+
+            <!--sections-->
+            <section class="hero">
+                <div class="hero-body">
+                    <div class="container">
+
+                        <!--columns-->
+                        <div class="columns is-centered" id="loginSignUpApp">
+                            <div class="column is-4">
+                                <h4 class="title is-4">Sign Up</h4>
+
+                                <form @submit="signupPost($event)">
+
+                                    <b-field label="First Name">
+                                        <b-input v-model="signup.first_name"
+                                                 required
+                                                 placeholder="First Name"></b-input>
+                                    </b-field>
+
+                                    <b-field label="Last Name">
+                                        <b-input v-model="signup.last_name"
+                                                 required
+                                                 placeholder="Last Name"></b-input>
+                                    </b-field>
+
+                                    <b-field label="Email">
+                                        <b-input v-model="signup.email"
+                                                 type="email"
+                                                 required
+                                                 placeholder="Work email address"></b-input>
+                                    </b-field>
+
+                                    <b-field label="Password">
+                                        <b-input v-model="signup.password"
+                                                 type="password"
+                                                 required
+                                                 password-reveal
+                                                 placeholder="Password"></b-input>
+                                    </b-field>
+
+                                    <div class="field">
+                                        <p class="control">
+                                            <b-button native-type="submit"
+                                                      :loading="is_btn_loading">
+                                                Sign Up
+                                            </b-button>
+
+                                            <a href="{{route('vh.frontend.projects.signin')}}"
+                                               class="button is-text is-pulled-right">
+                                                Sign In
+                                            </a>
+
+                                        </p>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                        <!--/columns-->
+
+                    </div>
+                </div>
+
+            </section>
+            <!--sections-->
+
+
+        </div>
+    </div>
+</div>
+@endsection
